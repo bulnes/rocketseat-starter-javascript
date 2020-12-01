@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 02 - Exercício 03</title>
+</head>
+<body>
+
+  <ul></ul>
+
+  <script>
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+    
+    var ulElement = document.querySelector('ul');
+    for (var i = 0; i < nomes.length; i++) {
+      var nome = nomes[i];
+
+      var liElement = document.createElement('li');
+      liElement.textContent = nome;
+
+      ulElement.appendChild(liElement);
+    }
+  </script>
+  
+</body>
+</html>

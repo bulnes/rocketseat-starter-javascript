@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 02 - Exercício 01</title>
+</head>
+<body>
+  
+  <div id="app">
+    <button id="botao">Criar</button>
+  </div>
+
+  <script>
+    var appContainer = document.querySelector('#app');
+    var buttonElement = document.querySelector('button#botao');
+
+    buttonElement.onclick = function() {
+      var element = document.createElement('div');
+      element.style.width = '100px';
+      element.style.height = '100px';
+      element.style.backgroundColor = 'red';
+      element.style.marginBottom = '10px';
+
+      appContainer.appendChild(element);
+    };
+  </script>
+
+</body>
+</html>

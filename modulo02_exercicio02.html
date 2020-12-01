@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 02 - Exercício 02</title>
+</head>
+<body>
+  
+  <div id="app">
+    <button id="botao">Criar</button>
+  </div>
+
+  <script>
+    var appContainer = document.querySelector('#app');
+    var buttonElement = document.querySelector('button#botao');
+
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+
+      return color;
+    }
+
+    buttonElement.onclick = function() {
+      var element = document.createElement('div');
+      element.style.width = '100px';
+      element.style.height = '100px';
+      element.style.backgroundColor = 'red';
+      element.style.marginBottom = '10px';
+
+      element.onmouseover = function() {
+        element.style.backgroundColor = getRandomColor();
+      };
+
+      appContainer.appendChild(element);
+    };
+  </script>
+
+</body>
+</html>
